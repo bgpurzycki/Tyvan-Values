@@ -4,7 +4,7 @@
 
 # Code written by Benjamin Grant Purzycki and Theiss Bendixen
 # Contact email: bgpurzycki@cas.au.dk
-# Last Updated May 25, 2020 by BGP
+# Last Updated July 27, 2020 by BGP
 
 rm(list = ls())
 
@@ -46,7 +46,8 @@ as.data.frame(table(cut(d$urbprop, breaks = seq(0, 1, by = 0.5))))
 ### Urbanity figure
 par(mar = c(5, 5, 2, 5))
 hist(d$urbprop, breaks = 10, prob = F, xlim = c(-.2, 1.2),
-     main = NA, xlab = "% of life spent living in urban environment")
+     main = NA, xlab = "% of life spent living in urban environment",
+     col = "gray")
 par(new = TRUE)
 plot(density(d$urbprop, na.rm = T, adjust = .7), lwd = 2, type = "l",
      main = NA, ylab = NA, xlab = NA, axes = F)
